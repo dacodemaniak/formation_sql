@@ -1,0 +1,18 @@
+services: 
+  db: 
+    image: mariadb:latest
+    env_file: .env
+    container_name: mariadb
+    restart: unless-stopped
+    ports: 
+      - 3306:3306
+    volumes: 
+      - ./database:/var/lib/mysql
+      - ./entrypoint/init.sql:/docker-entrypoint-initdb.d/init.sql
+  phpmyadmin: 
+    image: phpmyadmin
+    restart: unless-stopped
+    ports:
+      - 8080:80
+    environment:
+      - PMA_ARBITRARY=1

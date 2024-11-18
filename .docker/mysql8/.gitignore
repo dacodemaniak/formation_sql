@@ -1,0 +1,7 @@
+# Env vars
+.env
+
+# Exclude all files in datas but not datas himself
+datas/*
+!/datas/.ok
+!/datas/.gitkeep

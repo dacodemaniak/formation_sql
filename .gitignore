@@ -1,2 +1,8 @@
-# Documentation
-docs
+# Datas
+mariadb/datas
+!mariadb/datas/.gitkeep
+mysql8/datas
+!mysql8/datas/.gitkeep
+
+# Specifics MacOS
+.DS_Store
